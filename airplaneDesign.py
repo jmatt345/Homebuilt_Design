@@ -12,13 +12,12 @@ def solverho(h):
     return rho
 
 # This section of code determines power loading.
-Vmax = 170
-#Vmax = int(input("Enter Vmax (kts):"))  # desired maximum velocity in knots
+Vmax = int(input("Enter desired maximum velocity in knots:"))
 Whp = 680 * Vmax ** -0.79               # Weight to HP ratio smooth, retractable
 
 # This section of code determines wing loading.
-Vstall = 60
-#Vstall = int(input("Enter Vstall (kts):"))    # desired stall velocity in knots
+Vstall = int(input("Enter desired stall velocity in knots:"))
+
 h = 0                       # Represents sea level
 rho = solverho(h)
 qstall = 0.5 * rho * ((Vstall * 1.689) ** 2) # dynamic pressure
